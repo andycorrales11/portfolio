@@ -20,6 +20,34 @@ const projects: Project[] = [
     tags: ['embedded', 'python', 'hardware'],
     link: 'https://github.com/andycorrales11/CSCE-462-Remote-Controlled-Hamster-Ball',
   },
+  {
+    id: 2,
+    name: 'Fantasy Football Workbench',
+    summary: 'A fully open‑source, Python‑powered fantasy football analysis tool.',
+    tags: ['data analysis', 'python', 'pandas'],
+    link: 'https://github.com/andycorrales11/CSCE-462-Remote-Controlled-Hamster-Ball',
+  },
+  {
+    id: 3,
+    name: 'REAL Application',
+    summary: 'Software Engineering class group project for a real estate student organization at Texas A&M University.',
+    tags: ['SaaS', 'ruby on rails', 'agile'],
+    link: 'https://github.com/andycorrales11/CSCE-431-Organizational-App',
+  },
+  {
+    id: 4,
+    name: 'Colorblindness Helper',
+    summary: 'A Chrome extension that applies color filters to web pages to assist users with color vision deficiencies.',
+    tags: ['accessibility', 'javascript', 'chrome extension'],
+    link: 'https://github.com/andycorrales11/CSCE-432-Colorblindness-Corrector',
+  },
+  {
+    id: 5,
+    name: 'Portfolio Website',
+    summary: 'The source code for this portfolio website, built with Next.js, React, and Tailwind CSS.',
+    tags: ['web dev', 'typescript', 'react'],
+    link: 'https://github.com/andycorrales11/CSCE-432-Colorblindness-Corrector',
+  },
 ];
 
 export default function ProjectsPage() {
