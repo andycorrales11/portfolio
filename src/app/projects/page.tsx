@@ -25,7 +25,7 @@ const projects: Project[] = [
     name: 'Fantasy Football Workbench',
     summary: 'A fully open‑source, Python‑powered fantasy football analysis tool.',
     tags: ['data analysis', 'python', 'pandas'],
-    link: 'https://github.com/andycorrales11/CSCE-462-Remote-Controlled-Hamster-Ball',
+    link: 'https://github.com/andycorrales11/ground-game',
   },
   {
     id: 3,
