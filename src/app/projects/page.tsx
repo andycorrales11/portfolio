@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import ProjectCard from '@/components/ProjectCard';
 
 export type Project = {
