@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import ProjectCard from '@/components/ProjectCard';
 
 export type Project = {
@@ -52,8 +50,8 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <main className="container mx-auto px-4 py-10">
-    <h1 className="mb-8 mt-8 text-center text-3xl font-bold tracking-wide">Projects</h1>
+    <main className="container mx-auto px-4 py-10 pt-24">
+    <h1 className="mb-8 mt-8 text-center text-3xl font-bold tracking-wide text-cyan-200">Projects</h1>
 
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => (
