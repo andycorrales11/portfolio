@@ -37,7 +37,6 @@ export default function AboutPage() {
                     <p>&gt; CURRENTLY LEARNING: Pandas (Python)</p>
                     <p>&gt; READING: &quot;Psychopolitics&quot; by Byung-Chul Han, &quot;The Magic Mountain&quot; by Thomas Mann</p>
                     <p>&gt; LISTENING TO: &quot;Diamond Life&quot; by Sade, &quot;Stan Getz and the Cool Sounds&quot; by Stan Getz</p>
-                    <p>&gt; LOCATION: College Station, TX</p>
                 </div>
             </Window>
         </main>
