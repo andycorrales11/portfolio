@@ -20,7 +20,11 @@ export default function AboutPage() {
             </p>
             <br/>
             <p className="text-lg text-gray-300">
-                This site will continue to evolve as my interests and skills do. I try to think of it as scultpure I am carving away, revealing a clearer picture of my brain every time I push to production. I will try to make it as genuine as possible, both as a way to market myself but also so it serves a seperate functional purpose for myself as a journal of my journey.
+                This site will continue to evolve as my interests and skills do. 
+                I try to think of it as scultpure I am carving away, revealing a clearer picture
+                of my brain every time I push to production. I will try to make it as genuine as possible,
+                both as a way to market myself but also so it serves a seperate functional purpose for
+                myself as a journal of my journey.
             </p>
             <br/>
             <p className="text-lg text-gray-300">
