@@ -8,5 +8,5 @@ export default {
   theme: { extend: {fontFamily: {
         mono: ["var(--font-press)", "monospace"],
       },} },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 } satisfies Config;
