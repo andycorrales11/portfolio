@@ -1,24 +1,43 @@
+import Link from 'next/link';
 import { Project } from '@/app/projects/page';
 
-export default function ProjectCard({ project }: { project: Project }) {
-  return (
-    <a href={project.link} target="_blank" className="rounded-2xl ml-5 mr-5 border border-cyan-500/30 bg-black/30 p-5 shadow-lg shadow-cyan-800/30 backdrop-blur-md transition-transform hover:-translate-y-1 hover:shadow-cyan-500/40">
-      <h2 className="mb-2 text-xl font-bold text-cyan-200 drop-shadow-[0_0_4px_rgba(0,255,255,0.6)]">
-        {project.name}
-      </h2>
-      <p className="mb-4 text-sm text-gray-300/90">{project.summary}</p>
-
-      {/* tag chips */}
-      <ul className="flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <li
-            key={tag}
-            className="rounded-full bg-cyan-700/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-300 backdrop-blur-sm"
-          >
-            {tag}
-          </li>
-        ))}
-      </ul>
-    </a>
-  );
+interface ProjectCardProps {
+  project: Project;
 }
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const cardContent = (
+    <div className="border-2 border-cyan-400/50 bg-black/80 shadow-lg rounded-lg overflow-hidden backdrop-blur-sm h-full flex flex-col transition-all duration-200 hover:border-cyan-400">
+      <div className="bg-black/90 text-cyan-200 py-1 px-3 flex justify-between items-center">
+        <span className="font-mono text-sm truncate">{project.name}</span>
+        <div className="flex space-x-2 items-center">
+          <div className="w-2 h-2 rounded-full bg-cyan-400/50"></div>
+          <div className="w-2 h-2 rounded-full bg-cyan-400/50"></div>
+          <div className="w-2 h-2 rounded-full bg-cyan-400/50"></div>
+        </div>
+      </div>
+      <div className="p-4 flex-grow">
+        <p className="text-gray-300 mb-4 text-sm">{project.summary}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span key={tag} className="px-2 py-1 bg-cyan-900/50 text-cyan-200 text-xs rounded-full">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  if (project.link) {
+    return (
+      <Link href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+        {cardContent}
+      </Link>
+    );
+  }
+
+  return <div>{cardContent}</div>;
+};
+
+export default ProjectCard;

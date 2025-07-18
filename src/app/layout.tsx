@@ -46,7 +46,9 @@ export default function RootLayout({
         ].join(" ")}
       >
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
         <Analytics />
       </body>
     </html>
