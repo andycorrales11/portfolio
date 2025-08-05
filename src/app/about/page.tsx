@@ -35,8 +35,8 @@ export default function AboutPage() {
                 </p>
                 <div className="mt-4 text-lg text-cyan-200 font-mono">
                     <p>&gt; CURRENTLY LEARNING: Pandas (Python)</p>
-                    <p>&gt; READING: &quot;Psychopolitics&quot; by Byung-Chul Han, &quot;The Magic Mountain&quot; by Thomas Mann</p>
-                    <p>&gt; LISTENING TO: &quot;Diamond Life&quot; by Sade, &quot;Stan Getz and the Cool Sounds&quot; by Stan Getz</p>
+                    <p>&gt; READING: &quot;Children of Dune&quot; by Frank Herbert, &quot;The Magic Mountain&quot; by Thomas Mann</p>
+                    <p>&gt; LISTENING TO: &quot;20 Años&quot; by Luis Miguel, &quot;The Doors&quot; by The Doors</p>
                 </div>
             </Window>
         </main>
