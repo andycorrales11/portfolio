@@ -42,7 +42,7 @@ export default function RootLayout({
           geistSans.variable,
           geistMono.variable,
           pixel.variable, 
-          "antialiased bg-black text-white",
+          "antialiased bg-[#050505] text-[#00ff41]",
         ].join(" ")}
       >
         <Header />

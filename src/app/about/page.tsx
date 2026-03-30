@@ -4,13 +4,15 @@ export default function AboutPage() {
     return (
         <main className="container mx-auto px-4 py-10 pt-24">
             <Window title="about_me.txt">
-                <p className="text-lg text-gray-300 font-mono">
-                    Hi! I am Andres Corrales, I am a Computer Engineering student at Texas A&M
+                <p className="text-lg text-[#00ff41]/75 font-mono">
+                    Hi! I am Andres Corrales, I am a recent Computer Engineering graduate from Texas A&M
                     University in College Station. I grew up in Monterrey, Mexico,
-                    and then Houston, Texas.
+                    and then Houston, Texas. I am currently looking for full-time opportunities in the field of digital design and verification, 
+                    but I am open to many different types of roles in the tech industry. I am passionate about learning and working with new technologies, 
+                    and I am always looking for ways to challenge myself and grow as an engineer.
                 </p>
                 <br />
-                <p className="text-lg text-gray-300 font-mono">
+                <p className="text-lg text-[#00ff41]/75 font-mono">
                     Above all, I enjoy learning, acquiring knowledge, and sharing that knowledge. If anything, that is
                     what has driven me since I was a child.
                     This manifests itself in my wide array of hobbies, interests, and passions.
@@ -22,7 +24,7 @@ export default function AboutPage() {
                     rabbit holes about whichever topic I have deemed myself not knowedgable enough in.
                 </p>
                 <br />
-                <p className="text-lg text-gray-300 font-mono">
+                <p className="text-lg text-[#00ff41]/75 font-mono">
                     This site will continue to evolve as my interests and skills do.
                     I try to think of it as scultpure I am carving away, revealing a clearer picture
                     of my brain every time I push to production. I will try to make it as genuine as possible,
@@ -30,11 +32,11 @@ export default function AboutPage() {
                     myself as a journal of my journey.
                 </p>
                 <br />
-                <p className="text-lg text-gray-300 font-mono">
+                <p className="text-lg text-[#00ff41]/75 font-mono">
                     Now, some things I think are really interesting:
                 </p>
-                <div className="mt-4 text-lg text-cyan-200 font-mono">
-                    <p>&gt; CURRENTLY LEARNING: SystemVerilog, UVM Testbenches</p>
+                <div className="mt-4 text-lg text-[#00ff41] font-mono">
+                    <p>&gt; CURRENTLY LEARNING: SystemVerilog Assertions, Low Power Design</p>
                     <p>&gt; READING: &quot;Children of Dune&quot; by Frank Herbert, &quot;The Magic Mountain&quot; by Thomas Mann</p>
                     <p>&gt; LISTENING TO: &quot;20 Años&quot; by Luis Miguel, &quot;The Doors&quot; by The Doors</p>
                 </div>

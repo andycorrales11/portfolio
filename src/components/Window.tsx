@@ -7,13 +7,13 @@ interface WindowProps {
 
 const Window: React.FC<WindowProps> = ({ title, children }) => {
   return (
-    <div className="border-2 border-cyan-400/50 bg-black/80 shadow-lg rounded-lg overflow-hidden backdrop-blur-sm">
-      <div className="bg-black/90 text-cyan-200 py-1 px-3 flex justify-between items-center">
+    <div className="border border-[#00ff41]/40 bg-[#050505]/90 shadow-lg overflow-hidden backdrop-blur-sm">
+      <div className="bg-[#050505] text-[#00ff41] py-1 px-3 flex justify-between items-center border-b border-[#00ff41]/20">
         <span className="font-mono text-sm">{title}</span>
         <div className="flex space-x-2 items-center">
-          <div className="w-3 h-3 rounded-full bg-cyan-400/50"></div>
-          <div className="w-3 h-3 rounded-full bg-cyan-400/50"></div>
-          <div className="w-3 h-3 rounded-full bg-cyan-400/50"></div>
+          <div className="w-3 h-3 rounded-full bg-[#00ff41]/40"></div>
+          <div className="w-3 h-3 rounded-full bg-[#00ff41]/40"></div>
+          <div className="w-3 h-3 rounded-full bg-[#00ff41]/40"></div>
         </div>
       </div>
       <div className="p-4">

@@ -7,20 +7,20 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const cardContent = (
-    <div className="border-2 border-cyan-400/50 bg-black/80 shadow-lg rounded-lg overflow-hidden backdrop-blur-sm h-full flex flex-col transition-all duration-200 hover:border-cyan-400">
-      <div className="bg-black/90 text-cyan-200 py-1 px-3 flex justify-between items-center">
+    <div className="border border-[#00ff41]/40 bg-[#050505]/90 shadow-lg overflow-hidden backdrop-blur-sm h-full flex flex-col transition-all duration-200 hover:border-[#00ff41] hover:shadow-[0_0_12px_rgba(0,255,65,0.3)]">
+      <div className="bg-[#050505] text-[#00ff41] py-1 px-3 flex justify-between items-center border-b border-[#00ff41]/20">
         <span className="font-mono text-sm truncate">{project.name}</span>
         <div className="flex space-x-2 items-center">
-          <div className="w-2 h-2 rounded-full bg-cyan-400/50"></div>
-          <div className="w-2 h-2 rounded-full bg-cyan-400/50"></div>
-          <div className="w-2 h-2 rounded-full bg-cyan-400/50"></div>
+          <div className="w-2 h-2 rounded-full bg-[#00ff41]/40"></div>
+          <div className="w-2 h-2 rounded-full bg-[#00ff41]/40"></div>
+          <div className="w-2 h-2 rounded-full bg-[#00ff41]/40"></div>
         </div>
       </div>
       <div className="p-4 flex-grow">
-        <p className="text-gray-300 mb-4 text-sm">{project.summary}</p>
+        <p className="text-[#00ff41]/75 mb-4 text-sm font-mono">{project.summary}</p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <span key={tag} className="px-2 py-1 bg-cyan-900/50 text-cyan-200 text-xs rounded-full">
+            <span key={tag} className="px-2 py-1 bg-[#003311]/60 text-[#00cc33] text-xs font-mono">
               {tag}
             </span>
           ))}
