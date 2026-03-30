@@ -13,34 +13,41 @@ export type Project = {
 const projects: Project[] = [
   {
     id: 1,
+    name: 'RISC-V Core Design and Verification',
+    summary: 'Designing then verifying a custom single cycle RISC-V processor core with RV32I ISA',
+    tags: ['digital design', 'systemverilog', 'uvm'],
+    link: 'https://github.com/andycorrales11/riscv',
+  },
+  {
+    id: 2,
     name: 'Gyroscopic Hamster Ball',
     summary: 'Bluetooth‑controlled hamster ball using Raspberry Pi, Python, and PWM motor drivers.',
     tags: ['embedded', 'python', 'hardware'],
     link: 'https://github.com/andycorrales11/CSCE-462-Remote-Controlled-Hamster-Ball',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Fantasy Football Workbench',
     summary: 'A fully open‑source, Python‑powered fantasy football analysis tool.',
     tags: ['data analysis', 'python', 'pandas'],
-    link: 'https://github.com/andycorrales11/CSCE-462-Remote-Controlled-Hamster-Ball',
+    link: 'https://github.com/andycorrales11/ground-game',
   },
   {
-    id: 3,
+    id: 4,
     name: 'REAL Application',
     summary: 'Software Engineering class group project for a real estate student organization at Texas A&M University.',
     tags: ['SaaS', 'ruby on rails', 'agile'],
     link: 'https://github.com/andycorrales11/CSCE-431-Organizational-App',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Colorblindness Helper',
     summary: 'A Chrome extension that applies color filters to web pages to assist users with color vision deficiencies.',
     tags: ['accessibility', 'javascript', 'chrome extension'],
     link: 'https://github.com/andycorrales11/CSCE-432-Colorblindness-Corrector',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Portfolio Website',
     summary: 'The source code for this portfolio website, built with Next.js, React, and Tailwind CSS.',
     tags: ['web dev', 'typescript', 'react'],
@@ -51,7 +58,7 @@ const projects: Project[] = [
 export default function ProjectsPage() {
   return (
     <main className="container mx-auto px-4 py-10 pt-24">
-    <h1 className="mb-8 mt-8 text-center text-3xl font-bold tracking-wide text-cyan-200">Projects</h1>
+    <h1 className="mb-8 mt-8 text-center text-3xl font-bold tracking-wide text-[#00ff41] font-mono">Projects</h1>
 
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => (
