@@ -7,7 +7,7 @@ export default function LandingPage() {
       <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,_rgba(0,255,65,0.08)_1px,_transparent_1px)] [background-size:80px_80px]"></div>
 
       <div className="z-10 flex flex-col items-center gap-6 border border-[#00ff41]/30 px-10 py-10 max-w-lg w-full">
-        <p className="font-mono text-xs text-[#00ff41]/40 self-start">andres-corrales.dev — v2.0.0</p>
+        <p className="font-mono text-xs text-[#00ff41]/40 self-start">andycorrales.dev — v2.0.0</p>
 
         <h1 className="text-center font-[family-name:var(--font-pixel)] text-2xl md:text-3xl leading-relaxed text-[#00ff41] drop-shadow-[0_0_8px_rgba(0,255,65,0.8)]">
           ANDRES<br />CORRALES
