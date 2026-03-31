@@ -1,0 +1,33 @@
+---
+title: 'RISC-V Core: Bug Hunting and Branch Instructions'
+date: '2026-02-26'
+summary: 'First real bugs caught by the testbench, all branch/jump/upper immediate instructions added, and UVM begins.'
+tags: ['risc-v', 'systemverilog', 'uvm', 'digital-design']
+---
+
+## Week of Feb 23 – Mar 1
+
+Good week. Found some bugs using testbenches!
+
+### Bugs caught
+
+**Bug 1 - funct7 encoding wrong in the ALU.** The ALU uses the `funct7` field to distinguish `ADD` from `SUB` (and `SRL` from `SRA`). Had the bit wrong, so subtraction was computing addition and arithmetic right shift was doing logical. The testbench caught it immediately once I had a test case that exercised both variants.
+
+**Bug 2 - ADDI failing above 30.** Took a bit longer to nail down. Traced it to a sign extension issue where values near the boundary of the immediate field weren't being extended correctly.
+
+### New instructions
+
+Added the remaining RV32I instruction types this week:
+
+- **B-type (branches):** `BEQ`, `BNE`, `BLT`, `BGE`, `BLTU`, `BGEU` - conditional branches that compute a PC-relative target
+- **J-type:** `JAL` - jump and link, saves return address to a register
+- **I-type (more):** `JALR` - indirect jump through a register
+- **U-type:** `LUI` (load upper immediate) and `AUIPC` (add upper immediate to PC)
+
+This required a 3-way MUX for the PC next value (sequential, branch target, or jump target) and a dedicated **branch unit** module to evaluate branch conditions separately from the ALU.
+
+### Started UVM
+
+Added the UVM directory and an initial instruction class hierarchy. The base `instruction` sequence item will hold the opcode; subclasses for each instruction type will add the relevant fields and constraints. Very early days but the structure is taking shape.
+
+**What I learned this week:** B-type and J-type instructions are very complicated. Thankfully the resources I have been using explained how to implement them properly. Also using UVM again!

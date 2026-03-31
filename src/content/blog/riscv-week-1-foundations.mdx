@@ -1,0 +1,21 @@
+---
+title: 'RISC-V Core: Building the Foundation'
+date: '2026-01-22'
+summary: 'Started the RISC-V project: ALU, register file, program counter, and instruction memory up and running.'
+tags: ['risc-v', 'systemverilog', 'digital-design']
+---
+
+## Week of Jan 16 – 22
+
+Started the RISC-V processor project this week. The goal is to design and verify a full single-cycle RV32I core from scratch using open-source tooling such as Verilator for simulation and GTKWave for waveforms.
+
+The first thing I did was lay out the core building blocks:
+
+- **ALU** - handles all arithmetic and logic operations. Got a basic version done along with an initial testbench to sanity check it.
+- **Program Counter** - just a register that increments by 4 each cycle (word-aligned instructions).
+- **Register File** - 32 general-purpose 32-bit registers. x0 is hardwired to zero per the RISC-V spec.
+- **Instruction Memory** - read-only for now, initialized from a hex file.
+
+Nothing executes yet, but I have made an early testbench for the ALU. Just some practice essentially.
+
+**What I learned this week:** Setting up the simulation toolchain and getting comfortable with Verilator's C++ wrapper model, as well as brushing up on my Computer Architecture knowledge.

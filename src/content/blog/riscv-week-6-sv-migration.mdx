@@ -1,0 +1,15 @@
+---
+title: 'RISC-V Core: Upgrading to SystemVerilog'
+date: '2026-02-12'
+summary: 'Migrated the whole design from Verilog to SystemVerilog and wrote out the architecture document.'
+tags: ['risc-v', 'systemverilog', 'digital-design']
+---
+
+## Week of Feb 9 – 15
+
+Came back to the project after a few weeks away and decided to upgrade to SytemVerilog. Turns out there is really no practical use to use plain Verilog.
+
+I also wrote out a proper architecture document this week. This helped me realize I maybe had some of the architecture wrong at first.
+The instruction memory is now `instruction_memory.sv` and got some cleanup as part of the migration.
+
+**What I learned this week:** Forcing yourself to write down the why you are doing what you are doing is helpful. Also started reading more about the RV32I ISA.

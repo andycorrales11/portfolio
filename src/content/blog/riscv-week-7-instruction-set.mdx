@@ -1,0 +1,26 @@
+---
+title: 'RISC-V Core: R-Type, I-Type, and S-Type Instructions'
+date: '2026-02-21'
+summary: 'Heavy implementation week, got the datapath working for R, I, and S-type instructions'
+tags: ['risc-v', 'systemverilog', 'digital-design']
+---
+
+## Week of Feb 16 – 22
+
+Biggest week of the project so far. The datapath went from mostly-wired to executing instructions.
+
+### New modules
+
+- **Sign Extender** - handles the different immediate encodings for I, S, B, J, and U-type instructions. Each type packs the immediate bits differently in the 32-bit instruction word, so the sign extender needs to know the instruction type to reconstruct the right value.
+- **Instruction Decoder / Controller** - generates control signals from the opcode, funct3, and funct7 fields.
+- **Data Memory** - supports byte, halfword, and word writes. The S-type instructions (`SW`, `SH`, `SB`) need this to work correctly.
+- **MUX for immediate instructions** - lets the ALU take either a register value or a sign-extended immediate as its second operand.
+- **Makefile** - finally wired up a proper build system for running simulations.
+
+### R-type and I-type work, S-type is in
+
+R-type instructions (register-register ops like `ADD`, `SUB`, `AND`, `OR`, `XOR`, shifts) are implemented and passing the testbench. I-type (register-immediate: `ADDI`, `ANDI`, `LWORD`, etc.) work too.
+
+Made the silly mistake of not realizing that I had to intialize registers with I-type instructions first before doing R-type instructions. Lost a bit of time lol.
+
+**What I learned this week:** A lot of referencing the RV32I architecture when setting up the instruction decoder and sign extender. Very impressive stuff actually. Also brushed up on Make and Makefiles.

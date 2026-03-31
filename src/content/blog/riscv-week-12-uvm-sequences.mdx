@@ -1,0 +1,22 @@
+---
+title: 'RISC-V Core: Refactoring UVM Sequence Architecture'
+date: '2026-03-29'
+summary: 'Overhauled the sequence item class hierarchy and added encode functions'
+tags: ['risc-v', 'systemverilog', 'uvm', 'verification']
+---
+
+## Week of Mar 23 – 29
+
+Back at it after a few weeks off. This week was about cleaning up the UVM testbench's instruction class hierarchy before it gets harder to change.
+
+### The problem
+
+The original structure had each instruction as an individual sequence item, but I realized that would give me trouble when driving to the DUT. Instead, the sequence items will not be a list of instructions (a program).
+
+### The fix
+
+Created a new sequence item class, and then renamed the instruction classes to better reflect their role in the sequence architecture. Also added the encode() function to each instruction subclass.
+
+Removed the randomized constraint on the opcode field from the base class so that the opcode is fixed per instruction type, which is the right semantics. The randomization should be in the fields within an instruction type, not the type itself.
+
+**What I learned this week:** I learned more about the DUT connection, and how to properly load in a test.

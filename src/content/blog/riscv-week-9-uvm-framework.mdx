@@ -1,0 +1,27 @@
+---
+title: 'RISC-V Core: Building the UVM Testbench'
+date: '2026-03-06'
+summary: 'Got a working UVM testbench skeleton running: sequence items, sequences, agent, driver'
+tags: ['risc-v', 'systemverilog', 'uvm', 'verification']
+---
+
+## Week of Mar 2 – 8
+
+Shifted focus almost entirely to the UVM testbench this week. Got a lot of the structural scaffolding in place.
+
+### What's working
+
+- **Sequence items** - the `instruction_seq_item` base class is defined with `uvm_object_utils` macros and a constraint on the opcode field. Subclasses for each instruction type add their own fields.
+- **Sequences** - a few sequences defined to generate different patterns of instructions.
+- **Agent** - the UVM agent ties together the sequencer and driver. Created the `uvc` (Universal Verification Component) and instantiated it in the testbench top module.
+- **Driver** - drives instruction sequence items onto the DUT's instruction memory interface.
+- **Virtual interface** - the testbench top instantiates a `core_if` virtual interface and passes it down via the UVM config database so the driver can access the DUT signals.
+- **First test** - a basic test that runs a short sequence and uses `raise_objection` / `drop_objection` to control simulation end.
+
+Spent longer than I'd like to admit debugging why my UVM components weren't being constructed. The issue was instantiating them with `new()` instead of `::create()`. In UVM, you should almost always use the factory (`Type::create("name", parent)`)
+
+### What's next
+
+Need to finish the drdiver, and then the next step is getting the monitor working so I can check what the DUT is actually doing as well as building out the scoreboard.
+
+**What I learned this week:** UVM is complicated! Built on my knowledge of it from last semester's class, since when I used it then I was not building a whole testbench from scratch.
