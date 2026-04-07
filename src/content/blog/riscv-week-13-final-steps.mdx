@@ -1,0 +1,16 @@
+---
+title: 'RISC-V Core: Finalizing the UVM Testbench'
+date: '2026-04-04'
+summary: 'Finished the Scoreboard, Monitor, and Reference Model, as well as added coverage.'
+tags: ['risc-v', 'systemverilog', 'uvm', verification']
+---
+
+# Week of Mar 30 - Apr 4
+
+Arriving at the final stretch of this project. Worked on the checking and scoring aspect of the testbench, finalizing the monitor and the scoreboard, as well as the reference model for the scoreboard.
+
+### Scoring
+
+After first adding some constraints to the instruction classes, I created a monitor transaction class in order to collect data from the DUT. This class is basically just some encapsulation of signals after an instruction is run. The monitor creates an instance of this class to store the signals it collects from the virtual interface, and then sends it to the scoreboard. The scoreboard uses the reference model on the current instruction, and compares the signals between the actual DUT values and the expected values. If all the values match, it marks the test as passed.
+
+**What I learned this week:** Connecting the monitor and scoreboard was a bit difficult, I made a mistake first by trying to send the entire program to the scoreboard from the driver, but this was causing some issues. Instead, the scoreboard would just get the instruction run from the monitor, and then run the reference model on that instruction. I also learned how to use the uvm_analysis_port and uvm_analysis_imp macros.
