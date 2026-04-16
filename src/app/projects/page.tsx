@@ -41,17 +41,17 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    name: 'Colorblindness Helper',
-    summary: 'A Chrome extension that applies color filters to web pages to assist users with color vision deficiencies.',
-    tags: ['accessibility', 'javascript', 'chrome extension'],
-    link: 'https://github.com/andycorrales11/CSCE-432-Colorblindness-Corrector',
-  },
-  {
-    id: 6,
     name: 'Portfolio Website',
     summary: 'The source code for this portfolio website, built with Next.js, React, and Tailwind CSS.',
     tags: ['web dev', 'typescript', 'react'],
     link: 'https://github.com/andycorrales11/CSCE-432-Colorblindness-Corrector',
+  },
+  {
+    id: 6,
+    name: 'Photography Website',
+    summary: 'A responsive website for a local photographer, built with React and Tailwind CSS.',
+    tags: ['web dev', 'javascript', 'react'],
+    link: 'https://lanemcmillian.com',
   },
 ];
 
