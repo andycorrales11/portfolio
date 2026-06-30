@@ -20,24 +20,24 @@ const projects: Project[] = [
   },
   {
     id: 2,
+    name: 'APB & AXI Protocol Verification',
+    summary: 'Building separate UVM verification environments for the APB and AXI bus protocols.',
+    tags: ['verification', 'systemverilog', 'uvm'],
+    link: 'https://github.com/andycorrales11/apb-axi-verification',
+  },
+  {
+    id: 3,
     name: 'Gyroscopic Hamster Ball',
     summary: 'Bluetooth‑controlled hamster ball using Raspberry Pi, Python, and PWM motor drivers.',
     tags: ['embedded', 'python', 'hardware'],
     link: 'https://github.com/andycorrales11/CSCE-462-Remote-Controlled-Hamster-Ball',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Fantasy Football Workbench',
     summary: 'A fully open‑source, Python‑powered fantasy football analysis tool.',
     tags: ['data analysis', 'python', 'pandas'],
     link: 'https://github.com/andycorrales11/ground-game',
-  },
-  {
-    id: 4,
-    name: 'REAL Application',
-    summary: 'Software Engineering class group project for a real estate student organization at Texas A&M University.',
-    tags: ['SaaS', 'ruby on rails', 'agile'],
-    link: 'https://github.com/andycorrales11/CSCE-431-Organizational-App',
   },
   {
     id: 5,
