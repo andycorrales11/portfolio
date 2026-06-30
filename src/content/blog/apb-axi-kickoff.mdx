@@ -1,0 +1,31 @@
+---
+title: 'APB & AXI Verification: A New Project'
+date: '2026-06-30'
+summary: 'Kicking off a new project: building separate UVM verification environments for the APB and AXI bus protocols.'
+tags: ['apb', 'axi', 'systemverilog', 'uvm', 'verification']
+---
+
+## Starting Something New
+
+With the RISC-V core wrapped up, I wanted to take the UVM skills I picked up there and point them at something closer to what verification engineers actually deal with day to day: standard bus protocols. So my next project is verifying two of the AMBA buses — **APB** and **AXI** — each in its own self-contained UVM environment.
+
+The repo lives [here](https://github.com/andycorrales11/apb-axi-verification/) (it may be private for now while I get it off the ground).
+
+### Why APB and AXI
+
+These two sit at opposite ends of the AMBA spectrum, which is exactly why I picked them.
+
+- **APB** is the simple one. It's a low-bandwidth peripheral bus with a straightforward handshake, meant for talking to registers and slow peripherals. It's a great place to build up a clean testbench without drowning in protocol complexity.
+- **AXI** is the real challenge. Five independent channels, burst transfers, out-of-order completion, separate read and write paths — there's a lot of state to model and a lot of room for a DUT to misbehave.
+
+### The Plan
+
+I'm going to start with APB. The simpler handshake lets me focus on getting the UVM structure right — building out a reusable agent with a driver, monitor, sequencer, and a scoreboard to check transactions against expected behavior. Once that environment is solid, a lot of that scaffolding carries over.
+
+Then comes AXI, where the interesting problems live: driving and tracking the five channels independently, handling bursts, and dealing with out-of-order responses in the scoreboard. That's the part I'm most looking forward to.
+
+### Tooling
+
+Same philosophy as the RISC-V project — SystemVerilog and UVM running on open-source simulation. I like keeping the whole flow free and reproducible, and it forces me to actually understand what the tools are doing instead of leaning on a vendor GUI.
+
+**The goal:** end up with two clean, reusable UVM verification environments that catch real protocol violations — and a much deeper feel for how AMBA buses behave under the hood.
